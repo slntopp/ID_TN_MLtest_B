@@ -95,10 +95,11 @@ def handle_uploaded_audio_file(uploaded_file):
     channel_sounds = audio_dub.split_to_mono()
     samples = [s.get_array_of_samples() for s in channel_sounds]
 
-    fp_arr1 = np.array(samples).T.astype(np.float32)
+    fp_arr1 = np.array(samples).T#.astype(np.float32)
     fp_arr2 = fp_arr1 /  np.iinfo(samples[0].typecode).max
+    fp_arr3 = fp_arr2.astype(np.float32)
 
-    audio_arr_f = fp_arr2[:, 0]
+    audio_arr_f = fp_arr3[:, 0]
     audio_arr_sr_f = audio_dub.frame_rate
     return audio_arr_f, audio_arr_sr_f
 
