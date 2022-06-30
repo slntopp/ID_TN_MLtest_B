@@ -6,10 +6,11 @@
 # tensorflow==2.8.0
 # keras==2.8.0
 
-numpy
+streamlit==1.9.2
+numpy==1.21.5
 scipy
 matplotlib
 tensorflow==2.8.0
 keras==2.8.0
-librosa
-pydub
+librosa==0.9.1
+pydub==0.25.1
